@@ -23,6 +23,10 @@ public class UsandoBibliotecaEmail {
             email.setMsg("Isto é um teste... :-)");
             email.addTo("simoneperiodista3@gmail.com");
             email.send();
+
+            Carteiro.enviar("Aula sobre uso de bibliotecas e libraries",
+                    "Isto é um teste... :-)",
+                    "simoneperiodista3@gmail.com");
             System.out.println("Fim");
     }
 }
