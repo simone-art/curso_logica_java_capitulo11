@@ -10,15 +10,19 @@ public class UsandoBibliotecaEmail {
 
     public static void main (String [] args) throws EmailException {
         Email email = new SimpleEmail();
+        //smtp é o servidor do smtp do gmail
         email.setHostName("smtp.googlemail.com");
+        //setSmtpPort(465) é a porta do servidor
         email.setSmtpPort(465);
-        email.setAuthenticator(new DefaultAuthenticator("username", "password"));
+        email.setAuthenticator(new DefaultAuthenticator("digitalnotebook8", "cursologicajava77"));
         email.setSSLOnConnect(true);
-        email.setFrom("user@gmail.com");
-        email.setSubject("TestMail");
-        email.setMsg("This is a test mail ... :-)");
-        email.addTo("foo@bar.com");
+        email.setFrom("digitalnotebook8@gmail.com");
+        email.setSubject("Aula sobre uso de bibliotecas e libraries");
+        email.setMsg("Isto é um teste... :-)");
+        email.addTo("simoneperiodista3@gmail.com");
         email.send();
+
+        System.out.println("Fim");
 
     }
 }
